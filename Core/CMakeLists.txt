@@ -11,6 +11,9 @@ add_library(KotRCore STATIC
     src/vehicles/VehicleSystem.cpp
     src/leaderboard/DeliveryLeaderboard.cpp
     src/licenses/LicenseSystem.cpp
+     src/risk/RiskSystem.cpp
+    src/radio/RadioSystem.cpp 
+    tests/test_risk.cpp
 )
 
 target_include_directories(KotRCore PUBLIC
@@ -45,6 +48,9 @@ target_link_libraries(KotRTestVehicles PRIVATE KotRCore)
 
 add_executable(KotRTestLeaderboard tests/test_leaderboard.cpp)
 target_link_libraries(KotRTestLeaderboard PRIVATE KotRCore)
+
+add_executable(KotRTestRisk tests/test_risk.cpp)
+target_link_libraries(KotRTestRisk PRIVATE KotRCore)
 
 # Копируем data/ в build для тестов
 file(COPY ${CMAKE_CURRENT_SOURCE_DIR}/data DESTINATION ${CMAKE_CURRENT_BINARY_DIR})

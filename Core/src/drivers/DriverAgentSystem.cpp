@@ -1,5 +1,5 @@
 #include "kotr/drivers/DriverAgentSystem.hpp"
-#include "kotr/vechicles/VechicleSystem.hpp"
+#include "kotr/vehicles/VehicleSystem.hpp"
 #include <algorithm>
 #include <cmath>
 

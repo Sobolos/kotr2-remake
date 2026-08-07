@@ -1,4 +1,5 @@
 #include "kotr/contracts/ContractSystem.hpp"
+#include "kotr/risk/RiskSystem.hpp"
 #include <algorithm>
 #include <cmath>
 #include <sstream>
@@ -9,6 +10,7 @@ namespace kotr::contracts {
     using namespace kotr::core;
     using namespace kotr::data;
     using namespace kotr::economy;
+    using namespace kotr::risk;
 
     ContractSystem::ContractSystem(EventBus& eventBus, EconomySystem& economy, TimeSystem& time)
         : eventBus_(eventBus), economy_(economy), time_(time) {
@@ -202,8 +204,13 @@ namespace kotr::contracts {
     double ContractSystem::calcRouteRisk(const CityId& from, const CityId& to) const {
         const auto* f = economy_.getCityData(from);
         const auto* t = economy_.getCityData(to);
-        if (!f || !t) return 0.3;
-        return (f->baseDanger + t->baseDanger) / 2.0;
+        double baseRisk = (f && t) ? (f->baseDanger + t->baseDanger) / 2.0 : 0.3;
+
+        if (riskSystem_) {
+            baseRisk += (riskSystem_->getPoliceHeat() / 100.0) * 0.25;
+            baseRisk += (riskSystem_->getBanditPressure() / 100.0) * 0.25;
+        }
+        return std::min(2.0, baseRisk);
     }
 
     Money ContractSystem::calcPayout(const ContractOffer& c, double massTons, GameTime now) const {

@@ -6,6 +6,8 @@
 #include <kotr/core/TimeSystem.hpp>
 #include <kotr/economy/EconomySystem.hpp>
 
+namespace kotr::risk { class RiskSystem; }
+
 namespace kotr::contracts {
 
     enum class ContractType {
@@ -65,7 +67,7 @@ namespace kotr::contracts {
         std::string contractId;
         std::string carrierId;
         CarrierKind kind;
-        double massTons;
+        double massTons = 0.0;
     };
 
     struct ContractDeliveryArrivedEvent {
@@ -75,7 +77,7 @@ namespace kotr::contracts {
         std::string employerId;
         double massTons;
         double distanceKm;
-        core::Money payout;
+        core::Money payout = 0;
         bool onTime;
         std::string good;
     };
@@ -100,6 +102,8 @@ namespace kotr::contracts {
         ContractSystem(core::EventBus& eventBus,
             economy::EconomySystem& economy,
             core::TimeSystem& time);
+
+        void setRiskSystem(kotr::risk::RiskSystem* rs) { riskSystem_ = rs; }
 
         // --- Симуляция (генерация + разрешение доставок) ---
         void update(core::GameTime now);
@@ -129,6 +133,8 @@ namespace kotr::contracts {
         core::TimeSystem& time_;
         std::vector<ContractOffer> contracts_;
         int nextContractId_ = 1;
+
+        kotr::risk::RiskSystem* riskSystem_ = nullptr;
     };
 
 } // namespace kotr::contracts

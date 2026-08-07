@@ -46,7 +46,6 @@ namespace kotr::drivers {
         int repairSkill = 50;
         int negotiationSkill = 50;
 
-        std::vector<std::string> requiredLicenses; // 0–3 лицензии
         core::Money salaryExpectation = 150;       // базовая ставка в день
         int paymentPercent = 10;                   // для политики Percent
         double vehicleCapacityKg = 10000;          // рыночная ёмкость его тягача
@@ -110,7 +109,6 @@ namespace kotr::drivers {
 
         DriverSystem(core::EventBus& eventBus, core::TimeSystem& time);
 
-
         kotr::licenses::LicenseSystem* licenses_ = nullptr;
         void setLicenseSystem(kotr::licenses::LicenseSystem* ls) { licenses_ = ls; }
 
@@ -129,13 +127,10 @@ namespace kotr::drivers {
             core::Money total;
         };
         [[nodiscard]] HireCostBreakdown calcHireCost(const core::DriverId& id) const;
-        [[nodiscard]] bool hasRequiredLicenses(const core::DriverId& id) const;
+        [[nodiscard]] bool canHireMoreDrivers(const std::string& employerId) const;
         bool hireDriver(const core::DriverId& id, const std::string& employerId = "player");
         bool fireDriver(const core::DriverId& id);
         [[nodiscard]] std::vector<core::DriverId> getHiredDrivers(const std::string& employerId) const;
-
-        // --- Лицензии игрока ---
-        void addPlayerLicense(const std::string& license);
 
         // --- Запросы ---
         [[nodiscard]] const DriverState* getDriverState(const core::DriverId& id) const;
@@ -164,7 +159,6 @@ namespace kotr::drivers {
         core::TimeSystem& time_;
         std::unordered_map<core::DriverId, DriverPersonaData> personas_;
         std::unordered_map<core::DriverId, DriverState> states_;
-        std::vector<std::string> playerLicenses_;
     };
 
 } // namespace kotr::drivers

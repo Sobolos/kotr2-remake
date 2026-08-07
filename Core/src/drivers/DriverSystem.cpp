@@ -18,11 +18,10 @@ namespace kotr::drivers {
 
     DriverSystem::DriverSystem(EventBus& eventBus, TimeSystem& time)
         : eventBus_(eventBus), time_(time) {
-        // Автообновление: каждый игровой день и каждая неделя (по TAD)
         eventBus_.subscribe<GameDayElapsed>([this](const GameDayElapsed& e) {
             updateDay(e.time);
             });
-        eventBus_.subscribe<GameWeekElapsed>([this](const GameWeekElapsed&) {
+        eventBus_.subscribe<GameWeekElapsed>([this](const GameWeekElapsed& e) {
             rotateMarket();
             });
     }
@@ -35,7 +34,6 @@ namespace kotr::drivers {
         state.driverId = persona.id;
         state.currentVehicleCapacityKg = persona.vehicleCapacityKg;
 
-        // Если парковка заполнена — кандидат уходит в независимые
         state.status = initialStatus;
         if (initialStatus == DriverEmploymentStatus::FreeParked &&
             countByStatus(DriverEmploymentStatus::FreeParked) >= MAX_VISIBLE_CANDIDATES) {
@@ -55,14 +53,11 @@ namespace kotr::drivers {
                 result.push_back(id);
             }
         }
-        std::sort(result.begin(), result.end()); // детерминированный порядок
+        std::sort(result.begin(), result.end());
         return result;
     }
 
     void DriverSystem::rotateMarket() {
-        // Еженедельная ротация (по Driver Design §3):
-        // один кандидат с парковки уходит в независимые,
-        // один независимый занимает слот, если есть место.
         auto visible = getVisibleCandidates();
 
         if (!visible.empty()) {
@@ -93,23 +88,15 @@ namespace kotr::drivers {
         const auto* persona = getPersona(id);
         if (!persona) return { 0, 0, 0 };
 
-        // HireCost = signing_bonus + vehicle_buyout (по Economy Design §15.1)
         return { persona->signingBonus, persona->vehicleBuyoutPrice,
                 persona->signingBonus + persona->vehicleBuyoutPrice };
     }
 
-    bool DriverSystem::hasRequiredLicenses(const DriverId& id) const {
-        const auto* persona = getPersona(id);
-        if (!persona) return false;
-
+    bool DriverSystem::canHireMoreDrivers(const std::string& employerId) const {
         if (!licenses_) return true; // если LicenseSystem не подключён, пропускаем проверку
 
-        for (const auto& req : persona->requiredLicenses) {
-            if (!licenses_->hasLicense("player", req)) {
-                return false;
-            }
-        }
-        return true;
+        int currentHired = static_cast<int>(getHiredDrivers(employerId).size());
+        return licenses_->getLicenseCount(employerId) >= currentHired + 1;
     }
 
     bool DriverSystem::hireDriver(const DriverId& id, const std::string& employerId) {
@@ -118,7 +105,9 @@ namespace kotr::drivers {
 
         // Найм только с парковки (по Driver Design §3)
         if (it->second.status != DriverEmploymentStatus::FreeParked) return false;
-        if (!hasRequiredLicenses(id)) return false;
+
+        // Проверка квоты лицензий работодателя
+        if (!canHireMoreDrivers(employerId)) return false;
 
         it->second.status = (employerId == "player")
             ? DriverEmploymentStatus::HiredByPlayer
@@ -146,12 +135,6 @@ namespace kotr::drivers {
         return true;
     }
 
-    void DriverSystem::addPlayerLicense(const std::string& license) {
-        if (std::find(playerLicenses_.begin(), playerLicenses_.end(), license) == playerLicenses_.end()) {
-            playerLicenses_.push_back(license);
-        }
-    }
-
     // === Запросы ===
 
     const DriverState* DriverSystem::getDriverState(const DriverId& id) const {
@@ -168,6 +151,17 @@ namespace kotr::drivers {
         std::vector<DriverId> result;
         for (const auto& [id, st] : states_) {
             if (st.employerRef == "player") {
+                result.push_back(id);
+            }
+        }
+        std::sort(result.begin(), result.end());
+        return result;
+    }
+
+    std::vector<DriverId> DriverSystem::getHiredDrivers(const std::string& employerId) const {
+        std::vector<DriverId> result;
+        for (const auto& [id, st] : states_) {
+            if (st.employerRef == employerId) {
                 result.push_back(id);
             }
         }
@@ -192,7 +186,6 @@ namespace kotr::drivers {
         const auto* st = getDriverState(id);
         if (!persona || !st) return 0;
 
-        // Политики оплаты (по Economy Design §15.2)
         switch (st->paymentPolicy) {
         case PaymentPolicy::Fixed:
             return persona->salaryExpectation;
@@ -216,9 +209,6 @@ namespace kotr::drivers {
         const auto* st = getDriverState(id);
         if (!persona || !st) return 0.0;
 
-        // Формула из Risk System Design §14.2:
-        // BetrayalRisk = 0.35*LowLoyalty + 0.15*Fatigue + 0.15*Stress
-        //              + 0.15*PaymentDiscontent + 0.10*HiddenTrait + 0.10*CargoTemptation
         double lowLoyalty = (100.0 - st->loyalty) / 100.0;
         double fatigue = st->fatigue / 100.0;
         double stress = (100.0 - st->morale) / 100.0;
@@ -236,7 +226,6 @@ namespace kotr::drivers {
     }
 
     double DriverSystem::paymentDiscontent(const DriverState& st) {
-        // Нестабильный доход повышает недовольство (стартовые ориентиры)
         switch (st.paymentPolicy) {
         case PaymentPolicy::BonusOnly:   return 0.35;
         case PaymentPolicy::Percent:     return 0.20;
@@ -249,7 +238,7 @@ namespace kotr::drivers {
     // === Симуляция ===
 
     void DriverSystem::updateDay(GameTime now) {
-        // 1. Возврат водителей из OutOfAction (по Driver Design §2)
+        // 1. Возврат водителей из OutOfAction
         for (auto& [id, st] : states_) {
             if (st.status == DriverEmploymentStatus::OutOfAction &&
                 now.totalMinutes >= st.outOfActionUntil) {
@@ -270,12 +259,11 @@ namespace kotr::drivers {
             if (st.employerRef.empty()) continue;
 
             if (st.status == DriverEmploymentStatus::Resting) {
-                // Отдых снижает усталость
                 st.fatigue = clampInt(st.fatigue - 30, 0, 100);
                 if (st.fatigue <= 20) {
                     st.status = DriverEmploymentStatus::HiredByPlayer;
                 }
-                continue; // В отдыхе зарплата не начисляется
+                continue;
             }
 
             if (st.status != DriverEmploymentStatus::HiredByPlayer &&
@@ -284,10 +272,8 @@ namespace kotr::drivers {
                 continue;
             }
 
-            // Усталость растёт от работы
             st.fatigue = clampInt(st.fatigue + 10, 0, 100);
 
-            // Мораль и лояльность (по Economy Design §15.4)
             if (st.fatigue > 70) {
                 st.morale = clampInt(st.morale - 5, 0, 100);
             }
@@ -302,7 +288,6 @@ namespace kotr::drivers {
                 st.loyalty = clampInt(st.loyalty + 1, 0, 100);
             }
 
-            // Зарплата за день
             eventBus_.publish(DriverSalaryDueEvent{ id, st.employerRef, calcDailySalary(id, 0) });
         }
     }
@@ -311,12 +296,10 @@ namespace kotr::drivers {
         auto it = states_.find(id);
         if (it == states_.end()) return;
 
-        // По Driver Design §2: контракт провален, трудовое соглашение
-        // расторгается БЕЗ штрафа, водитель OutOfAction на 1 день.
         it->second.status = DriverEmploymentStatus::OutOfAction;
         it->second.outOfActionUntil = now.totalMinutes + OUT_OF_ACTION_DURATION;
         it->second.employerRef = "";
-        it->second.currentVehicleCapacityKg = 0.0; // машина уничтожена
+        it->second.currentVehicleCapacityKg = 0.0;
 
         eventBus_.publish(DriverVehicleDestroyedEvent{ id, it->second.outOfActionUntil });
     }
@@ -336,15 +319,6 @@ namespace kotr::drivers {
             if (st.status == s) count++;
         }
         return count;
-    }
-
-    std::vector<DriverId> DriverSystem::getHiredDrivers(const std::string& employerId) const {
-        std::vector<DriverId> result;
-        for (const auto& [id, st] : states_) {
-            if (st.employerRef == employerId) result.push_back(id);
-        }
-        std::sort(result.begin(), result.end());
-        return result;
     }
 
 } // namespace kotr::drivers

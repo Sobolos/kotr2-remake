@@ -88,9 +88,6 @@
 7. (Запланировано, не реализовано) Нанятый водитель с лицензией и капиталом может уволиться и стать работодателем (триггер: licenses≥1 && money≥порог && рядом кандидат; событие DriverBecameEmployer).
 
 ## 4. СОГЛАСОВАННЫЕ РЕШЕНИЯ, НЕ РЕАЛИЗОВАННЫЕ (очередь)
-A. МАЛЫЙ ПАТЧ (сделать первым):
-   1) `#include <random>` в DeliveryLeaderboard.hpp.
-   2) Упрощение лицензий: УБРАТЬ категории; лицензия = факт допуска к найму; количество = число побед с учётом серии (2 подряд → 2 лицензии, 3+ подряд → 3); `required_licenses` у persona становится числом 0–3; hasRequiredLicenses сравнивает количества. Переписать DeliveryLeaderboard/LicenseSystem/DriverSystem + тесты.
 B. VehicleSystem расширение (с фазой Risk): DamagePartState (12 частей по Vehicle Design §15), износ WearGain, BreakdownRisk, апгрейды в JSON.
 C. RoadGraph (фаза 9): RoadNode/RoadEdge (length, road_class A–F, surface, base_danger, speed_limit, faction_zones), RiskPocket/RepairPoint на рёбрах; позиция = (edge_id, progress); сопоставление с UE-сплайнами по edge_id.
 D. Balance Visualizer (фаза 10): DebugServer (HTTP/WebSocket) в Core + веб-фронт (Canvas): карта городов, точки машин (красная/синие/зелёные), клик по городу → supply/demand, активные контракты и участники гонки, наймы, лицензии. Автопилот-плейтест без UE.
