@@ -1,0 +1,852 @@
+{
+  "version": "0.1",
+  "cities": [
+    {
+      "id": "city_yuzhny",
+      "name_key": "loc.city.yuzhny.name",
+      "specialization": "logistics",
+      "economic_power": 1.0,
+      "storage_capacity_multiplier": 1.2,
+      "fuel_base_price": 9,
+      "parts_base_availability": 0.9,
+      "base_danger": 0.35,
+      "coord_x": 4.5,
+      "coord_y": 3.0,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 10,
+          "consumption_per_day": 45,
+          "initial_supply": 25,
+          "initial_demand": 35
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 0,
+          "consumption_per_day": 25,
+          "initial_supply": 10,
+          "initial_demand": 20
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 0,
+          "consumption_per_day": 40,
+          "initial_supply": 15,
+          "initial_demand": 30
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 0,
+          "consumption_per_day": 60,
+          "initial_supply": 30,
+          "initial_demand": 45
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 20,
+          "consumption_per_day": 15,
+          "initial_supply": 25,
+          "initial_demand": 10
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 0,
+          "consumption_per_day": 30,
+          "initial_supply": 10,
+          "initial_demand": 25
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 0,
+          "consumption_per_day": 5,
+          "initial_supply": 5,
+          "initial_demand": 3
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 35,
+          "consumption_per_day": 30,
+          "initial_supply": 40,
+          "initial_demand": 20
+        }
+      ]
+    },
+    {
+      "id": "city_elnino",
+      "name_key": "loc.city.elnino.name",
+      "specialization": "agriculture",
+      "economic_power": 0.6,
+      "storage_capacity_multiplier": 0.8,
+      "fuel_base_price": 10,
+      "parts_base_availability": 0.5,
+      "base_danger": 0.20,
+      "coord_x": 9.5,
+      "coord_y": 3.5,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 60,
+          "consumption_per_day": 15,
+          "initial_supply": 80,
+          "initial_demand": 10
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 0,
+          "consumption_per_day": 5,
+          "initial_supply": 5,
+          "initial_demand": 3
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 0,
+          "consumption_per_day": 15,
+          "initial_supply": 8,
+          "initial_demand": 12
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 0,
+          "consumption_per_day": 20,
+          "initial_supply": 10,
+          "initial_demand": 15
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 0,
+          "consumption_per_day": 10,
+          "initial_supply": 5,
+          "initial_demand": 8
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 0,
+          "consumption_per_day": 5,
+          "initial_supply": 3,
+          "initial_demand": 4
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 0,
+          "consumption_per_day": 20,
+          "initial_supply": 8,
+          "initial_demand": 15
+        }
+      ]
+    },
+    {
+      "id": "city_klyuchi",
+      "name_key": "loc.city.klyuchi.name",
+      "specialization": "transit",
+      "economic_power": 0.5,
+      "storage_capacity_multiplier": 0.7,
+      "fuel_base_price": 10,
+      "parts_base_availability": 0.4,
+      "base_danger": 0.25,
+      "coord_x": 10.5,
+      "coord_y": 7.5,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 20,
+          "consumption_per_day": 10,
+          "initial_supply": 20,
+          "initial_demand": 8
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 0,
+          "consumption_per_day": 3,
+          "initial_supply": 3,
+          "initial_demand": 2
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 0,
+          "consumption_per_day": 10,
+          "initial_supply": 5,
+          "initial_demand": 8
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 0,
+          "consumption_per_day": 25,
+          "initial_supply": 12,
+          "initial_demand": 20
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 0,
+          "consumption_per_day": 8,
+          "initial_supply": 4,
+          "initial_demand": 6
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 0,
+          "consumption_per_day": 3,
+          "initial_supply": 2,
+          "initial_demand": 2
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 0,
+          "consumption_per_day": 10,
+          "initial_supply": 5,
+          "initial_demand": 8
+        }
+      ]
+    },
+    {
+      "id": "city_zalessk",
+      "name_key": "loc.city.zalessk.name",
+      "specialization": "forest",
+      "economic_power": 0.7,
+      "storage_capacity_multiplier": 0.9,
+      "fuel_base_price": 11,
+      "parts_base_availability": 0.5,
+      "base_danger": 0.55,
+      "coord_x": 5.5,
+      "coord_y": 8.5,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 5,
+          "consumption_per_day": 30,
+          "initial_supply": 12,
+          "initial_demand": 25
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 70,
+          "consumption_per_day": 5,
+          "initial_supply": 90,
+          "initial_demand": 3
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 0,
+          "consumption_per_day": 10,
+          "initial_supply": 5,
+          "initial_demand": 8
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 0,
+          "consumption_per_day": 25,
+          "initial_supply": 10,
+          "initial_demand": 20
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 0,
+          "consumption_per_day": 12,
+          "initial_supply": 5,
+          "initial_demand": 10
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 0,
+          "consumption_per_day": 5,
+          "initial_supply": 3,
+          "initial_demand": 4
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 0,
+          "consumption_per_day": 15,
+          "initial_supply": 6,
+          "initial_demand": 12
+        }
+      ]
+    },
+    {
+      "id": "city_borovoe",
+      "name_key": "loc.city.borovoe.name",
+      "specialization": "forest",
+      "economic_power": 0.5,
+      "storage_capacity_multiplier": 0.7,
+      "fuel_base_price": 11,
+      "parts_base_availability": 0.4,
+      "base_danger": 0.50,
+      "coord_x": 6.0,
+      "coord_y": 13.0,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 15,
+          "consumption_per_day": 12,
+          "initial_supply": 15,
+          "initial_demand": 10
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 40,
+          "consumption_per_day": 3,
+          "initial_supply": 50,
+          "initial_demand": 2
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 0,
+          "consumption_per_day": 5,
+          "initial_supply": 3,
+          "initial_demand": 4
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 0,
+          "consumption_per_day": 15,
+          "initial_supply": 7,
+          "initial_demand": 12
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 0,
+          "consumption_per_day": 8,
+          "initial_supply": 3,
+          "initial_demand": 6
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 0,
+          "consumption_per_day": 3,
+          "initial_supply": 2,
+          "initial_demand": 2
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 0,
+          "consumption_per_day": 10,
+          "initial_supply": 4,
+          "initial_demand": 8
+        }
+      ]
+    },
+    {
+      "id": "city_bukhta",
+      "name_key": "loc.city.bukhta.name",
+      "specialization": "port",
+      "economic_power": 0.8,
+      "storage_capacity_multiplier": 1.0,
+      "fuel_base_price": 9,
+      "parts_base_availability": 0.7,
+      "base_danger": 0.35,
+      "coord_x": 8.0,
+      "coord_y": 16.5,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 30,
+          "consumption_per_day": 20,
+          "initial_supply": 35,
+          "initial_demand": 15
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 20,
+          "consumption_per_day": 5,
+          "initial_supply": 25,
+          "initial_demand": 3
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 0,
+          "consumption_per_day": 10,
+          "initial_supply": 5,
+          "initial_demand": 8
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 0,
+          "consumption_per_day": 40,
+          "initial_supply": 20,
+          "initial_demand": 30
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 0,
+          "consumption_per_day": 15,
+          "initial_supply": 8,
+          "initial_demand": 12
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 0,
+          "consumption_per_day": 20,
+          "initial_supply": 8,
+          "initial_demand": 15
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 5,
+          "consumption_per_day": 25,
+          "initial_supply": 10,
+          "initial_demand": 20
+        }
+      ]
+    },
+    {
+      "id": "city_priozersk",
+      "name_key": "loc.city.priozersk.name",
+      "specialization": "oil",
+      "economic_power": 1.0,
+      "storage_capacity_multiplier": 1.3,
+      "fuel_base_price": 7,
+      "parts_base_availability": 0.9,
+      "base_danger": 0.30,
+      "coord_x": 11.0,
+      "coord_y": 13.5,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 5,
+          "consumption_per_day": 50,
+          "initial_supply": 20,
+          "initial_demand": 40
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 0,
+          "consumption_per_day": 25,
+          "initial_supply": 10,
+          "initial_demand": 20
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 0,
+          "consumption_per_day": 45,
+          "initial_supply": 20,
+          "initial_demand": 35
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 100,
+          "consumption_per_day": 30,
+          "initial_supply": 120,
+          "initial_demand": 20
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 5,
+          "consumption_per_day": 30,
+          "initial_supply": 15,
+          "initial_demand": 25
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 0,
+          "consumption_per_day": 30,
+          "initial_supply": 10,
+          "initial_demand": 25
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 0,
+          "consumption_per_day": 20,
+          "initial_supply": 8,
+          "initial_demand": 15
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 40,
+          "consumption_per_day": 35,
+          "initial_supply": 45,
+          "initial_demand": 25
+        }
+      ]
+    },
+    {
+      "id": "city_shakhty",
+      "name_key": "loc.city.shakhty.name",
+      "specialization": "mining",
+      "economic_power": 0.8,
+      "storage_capacity_multiplier": 1.0,
+      "fuel_base_price": 12,
+      "parts_base_availability": 0.5,
+      "base_danger": 0.65,
+      "coord_x": 15.0,
+      "coord_y": 8.0,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 0,
+          "consumption_per_day": 45,
+          "initial_supply": 15,
+          "initial_demand": 35
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 0,
+          "consumption_per_day": 20,
+          "initial_supply": 8,
+          "initial_demand": 15
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 90,
+          "consumption_per_day": 5,
+          "initial_supply": 120,
+          "initial_demand": 3
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 0,
+          "consumption_per_day": 35,
+          "initial_supply": 15,
+          "initial_demand": 28
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 0,
+          "consumption_per_day": 25,
+          "initial_supply": 10,
+          "initial_demand": 20
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 0,
+          "consumption_per_day": 10,
+          "initial_supply": 5,
+          "initial_demand": 8
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 0,
+          "consumption_per_day": 20,
+          "initial_supply": 8,
+          "initial_demand": 16
+        }
+      ]
+    },
+    {
+      "id": "city_gorny",
+      "name_key": "loc.city.gorny.name",
+      "specialization": "mountain",
+      "economic_power": 0.5,
+      "storage_capacity_multiplier": 0.6,
+      "fuel_base_price": 13,
+      "parts_base_availability": 0.3,
+      "base_danger": 0.60,
+      "coord_x": 17.5,
+      "coord_y": 10.5,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 0,
+          "consumption_per_day": 25,
+          "initial_supply": 10,
+          "initial_demand": 20
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 0,
+          "consumption_per_day": 10,
+          "initial_supply": 4,
+          "initial_demand": 8
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 0,
+          "consumption_per_day": 8,
+          "initial_supply": 4,
+          "initial_demand": 6
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 0,
+          "consumption_per_day": 20,
+          "initial_supply": 8,
+          "initial_demand": 16
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 0,
+          "consumption_per_day": 15,
+          "initial_supply": 5,
+          "initial_demand": 12
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 0,
+          "consumption_per_day": 5,
+          "initial_supply": 2,
+          "initial_demand": 4
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 50,
+          "consumption_per_day": 0,
+          "initial_supply": 60,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 0,
+          "consumption_per_day": 12,
+          "initial_supply": 5,
+          "initial_demand": 10
+        }
+      ]
+    },
+    {
+      "id": "city_nizhnegorsk",
+      "name_key": "loc.city.nizhnegorsk.name",
+      "specialization": "metal",
+      "economic_power": 0.9,
+      "storage_capacity_multiplier": 1.1,
+      "fuel_base_price": 10,
+      "parts_base_availability": 0.8,
+      "base_danger": 0.40,
+      "coord_x": 16.0,
+      "coord_y": 13.5,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 0,
+          "consumption_per_day": 35,
+          "initial_supply": 15,
+          "initial_demand": 28
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 0,
+          "consumption_per_day": 15,
+          "initial_supply": 6,
+          "initial_demand": 12
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 0,
+          "consumption_per_day": 40,
+          "initial_supply": 15,
+          "initial_demand": 32
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 0,
+          "consumption_per_day": 30,
+          "initial_supply": 12,
+          "initial_demand": 25
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 30,
+          "consumption_per_day": 10,
+          "initial_supply": 35,
+          "initial_demand": 8
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 60,
+          "consumption_per_day": 5,
+          "initial_supply": 70,
+          "initial_demand": 3
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 0,
+          "consumption_per_day": 30,
+          "initial_supply": 12,
+          "initial_demand": 25
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 0,
+          "consumption_per_day": 0,
+          "initial_supply": 0,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 0,
+          "consumption_per_day": 20,
+          "initial_supply": 8,
+          "initial_demand": 16
+        }
+      ]
+    },
+    {
+      "id": "city_almazny",
+      "name_key": "loc.city.almazny.name",
+      "specialization": "mining",
+      "economic_power": 0.7,
+      "storage_capacity_multiplier": 0.8,
+      "fuel_base_price": 14,
+      "parts_base_availability": 0.3,
+      "base_danger": 0.50,
+      "coord_x": 17.5,
+      "coord_y": 16.0,
+      "goods": [
+        {
+          "good_id": "good_food",
+          "production_per_day": 0,
+          "consumption_per_day": 30,
+          "initial_supply": 12,
+          "initial_demand": 25
+        },
+        {
+          "good_id": "good_timber",
+          "production_per_day": 0,
+          "consumption_per_day": 5,
+          "initial_supply": 3,
+          "initial_demand": 4
+        },
+        {
+          "good_id": "good_coal",
+          "production_per_day": 0,
+          "consumption_per_day": 10,
+          "initial_supply": 5,
+          "initial_demand": 8
+        },
+        {
+          "good_id": "good_fuel",
+          "production_per_day": 0,
+          "consumption_per_day": 25,
+          "initial_supply": 10,
+          "initial_demand": 20
+        },
+        {
+          "good_id": "good_parts",
+          "production_per_day": 0,
+          "consumption_per_day": 20,
+          "initial_supply": 8,
+          "initial_demand": 16
+        },
+        {
+          "good_id": "good_metal",
+          "production_per_day": 0,
+          "consumption_per_day": 15,
+          "initial_supply": 6,
+          "initial_demand": 12
+        },
+        {
+          "good_id": "good_ore",
+          "production_per_day": 30,
+          "consumption_per_day": 0,
+          "initial_supply": 35,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_gems",
+          "production_per_day": 5,
+          "consumption_per_day": 0,
+          "initial_supply": 8,
+          "initial_demand": 0
+        },
+        {
+          "good_id": "good_consumer",
+          "production_per_day": 0,
+          "consumption_per_day": 20,
+          "initial_supply": 8,
+          "initial_demand": 16
+        }
+      ]
+    }
+  ]
+}

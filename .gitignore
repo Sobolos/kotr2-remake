@@ -1,0 +1,26 @@
+# Build
+build/
+out/
+.vs/
+CMakeSettings.json
+CMakeUserPresets.json
+
+# IDE
+*.user
+*.suo
+*.sln
+*.vcxproj*
+.idea/
+.vscode/
+
+# Binaries
+*.exe
+*.obj
+*.o
+*.lib
+*.dll
+*.pdb
+
+# OS
+Thumbs.db
+.DS_Store
