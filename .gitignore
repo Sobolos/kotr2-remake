@@ -1,26 +1,72 @@
-# Build
-build/
-out/
-.vs/
-CMakeSettings.json
-CMakeUserPresets.json
-
-# IDE
-*.user
-*.suo
-*.sln
-*.vcxproj*
-.idea/
-.vscode/
-
-# Binaries
-*.exe
-*.obj
+```
+# Compiled and build artifacts
+*.pyc
+__pycache__/
 *.o
-*.lib
+*.obj
+*.class
+*.exe
 *.dll
-*.pdb
+*.so
+*.a
+*.out
 
-# OS
-Thumbs.db
+# Dependencies
+.venv/
+venv/
+node_modules/
+.mypy_cache/
+.pytest_cache/
+dist/
+build/
+target/
+.gradle/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# System files
 .DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Compressed files
+*.zip
+*.gz
+*.tar
+*.tgz
+*.bz2
+*.xz
+*.7z
+*.rar
+*.zst
+*.lz4
+*.lzh
+*.cab
+*.arj
+*.rpm
+*.deb
+*.Z
+*.lz
+*.lzo
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.tar.zst
+```
