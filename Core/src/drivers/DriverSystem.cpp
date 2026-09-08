@@ -86,10 +86,15 @@ namespace kotr::drivers {
 
     DriverSystem::HireCostBreakdown DriverSystem::calcHireCost(const DriverId& id) const {
         const auto* persona = getPersona(id);
-        if (!persona) return { 0, 0, 0 };
+        if (!persona) return { 0, 0, 0, 0, 0 };
 
-        return { persona->signingBonus, persona->vehicleBuyoutPrice,
-                persona->signingBonus + persona->vehicleBuyoutPrice };
+        // depositAmount = vehicleBuyoutPrice (залог равен стоимости выкупа)
+        // initialAdvance по умолчанию = 0, если не задано в персона-данных
+        core::Money deposit = persona->vehicleBuyoutPrice;
+        core::Money advance = persona->initialAdvance;
+        core::Money total = persona->signingBonus + persona->vehicleBuyoutPrice + advance;
+
+        return { persona->signingBonus, persona->vehicleBuyoutPrice, advance, deposit, total };
     }
 
     bool DriverSystem::canHireMoreDrivers(const std::string& employerId) const {
@@ -115,7 +120,7 @@ namespace kotr::drivers {
         it->second.employerRef = employerId;
 
         auto cost = calcHireCost(id);
-        eventBus_.publish(DriverHiredEvent{ id, employerId, cost.total,
+        eventBus_.publish(DriverHiredEvent{ id, employerId, cost.total, cost.depositAmount,
                                            it->second.currentVehicleCapacityKg });
         return true;
     }
@@ -126,12 +131,19 @@ namespace kotr::drivers {
         if (it->second.employerRef.empty()) return false;
         if (it->second.status == DriverEmploymentStatus::OutOfAction) return false;
 
+        // Возврат залога при увольнении (по Economy Design §15.1)
+        const auto* persona = getPersona(id);
+        core::Money depositToReturn = persona ? persona->vehicleBuyoutPrice : 0;
+
         it->second.employerRef = "";
         it->second.status = (countByStatus(DriverEmploymentStatus::FreeParked) < MAX_VISIBLE_CANDIDATES)
             ? DriverEmploymentStatus::FreeParked
             : DriverEmploymentStatus::FreeIndependent;
 
-        eventBus_.publish(DriverFiredEvent{ id });
+        // Событие о возврате залога
+        eventBus_.publish(DriverDepositReturnedEvent{ id, it->second.employerRef, depositToReturn });
+
+        eventBus_.publish(DriverFiredEvent{ id, depositToReturn });
         return true;
     }
 

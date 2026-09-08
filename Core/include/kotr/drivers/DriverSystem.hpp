@@ -51,6 +51,7 @@ namespace kotr::drivers {
         double vehicleCapacityKg = 10000;          // рыночная ёмкость его тягача
         core::Money vehicleBuyoutPrice = 25000;    // выкуп при найме
         core::Money signingBonus = 500;            // подъёмные
+        core::Money initialAdvance = 0;            // аванс при найме (по умолчанию 0)
     };
 
     /// Рантайм-состояние водителя (по DMS: DriverState)
@@ -72,11 +73,19 @@ namespace kotr::drivers {
         core::DriverId driverId;
         std::string employerId;      // "player" или id именного
         core::Money totalCost;
+        core::Money depositAmount;   // залог за автомобиль (возвращается при увольнении)
         double capacityKg;
     };
 
     struct DriverFiredEvent {
         core::DriverId driverId;
+        core::Money depositReturned; // возвращённый залог
+    };
+
+    struct DriverDepositReturnedEvent {
+        core::DriverId driverId;
+        std::string employerId;
+        core::Money depositAmount;
     };
 
     struct DriverSalaryDueEvent {
@@ -124,7 +133,9 @@ namespace kotr::drivers {
         struct HireCostBreakdown {
             core::Money signingBonus;
             core::Money vehicleBuyout;
-            core::Money total;
+            core::Money initialAdvance;
+            core::Money depositAmount;     // залог (возвращается при увольнении)
+            core::Money total;             // signingBonus + vehicleBuyout + initialAdvance
         };
         [[nodiscard]] HireCostBreakdown calcHireCost(const core::DriverId& id) const;
         [[nodiscard]] bool canHireMoreDrivers(const std::string& employerId) const;

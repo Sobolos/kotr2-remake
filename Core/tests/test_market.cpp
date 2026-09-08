@@ -99,15 +99,13 @@ TEST_CASE("FinanceSystem: events and statistics") {
 
 TEST_CASE("MarketSystem: market share calculation") {
     EventBus bus;
-    MarketSystem market(bus);
+    MarketSystem market(bus, 20000.0);  // фиксированная ёмкость для теста
 
     SUBCASE("Формула доли рынка") {
-        // По DMS: MarketShare = PlayerCapacity / (Player + Competitors) * 100
+        // По Economy Design §16.4: MarketShare = PlayerCapacity / TotalMarketCapacity * 100
+        // TotalMarketCapacity фиксирована (все 52 тягача)
         market.setPlayerCapacity(5000);      // 5 тонн (ЗиЛ)
-        market.setCompetitorCapacity("comp_1", 10000); // 10 тонн
-        market.setCompetitorCapacity("comp_2", 5000);  // 5 тонн
 
-        // Total = 5000 + 10000 + 5000 = 20000
         // Share = 5000 / 20000 * 100 = 25%
         CHECK(market.getMarketShare() == doctest::Approx(25.0));
         CHECK(market.getTotalMarketCapacity() == doctest::Approx(20000.0));
@@ -115,40 +113,39 @@ TEST_CASE("MarketSystem: market share calculation") {
 
     SUBCASE("Пустой рынок") {
         CHECK(market.getMarketShare() == doctest::Approx(0.0));
-        CHECK(market.getTotalMarketCapacity() == doctest::Approx(0.0));
+        CHECK(market.getTotalMarketCapacity() == doctest::Approx(20000.0));  // фиксировано
     }
 
     SUBCASE("Только игрок на рынке") {
-        market.setPlayerCapacity(5000);
+        market.setPlayerCapacity(20000);  // игрок занял всю ёмкость
         CHECK(market.getMarketShare() == doctest::Approx(100.0));
     }
 }
 
 TEST_CASE("MarketSystem: victory condition") {
     EventBus bus;
-    MarketSystem market(bus);
+    MarketSystem market(bus, 1270000.0);  // фиксированная ёмкость ~1265 тонн
 
     SUBCASE("Победа при >51%") {
-        // По Balance Prototype: рынок ~1265 тонн, и он примерно постоянен.
+        // По Economy Design §16.4: TotalMarketCapacity фиксирована (все 52 тягача)
         // Игрок растёт, ПОГЛОЩАЯ ёмкость конкурентов (найм с тягачами),
-        // поэтому сумма "игрок + конкуренты" остаётся ~прежней.
-        market.setCompetitorCapacity("mass_ai", 350000);      // было 750т, часть нанята
-        market.setCompetitorCapacity("named_drivers", 270000); // было 510т, часть нанята
-
+        // поэтому общая ёмкость рынка остаётся неизменной.
+        
         // Игрок с 5 тоннами (ЗиЛ) — меньше 1%
         market.setPlayerCapacity(5000);
         CHECK(market.getMarketShare() < 1.0);
         CHECK_FALSE(market.isVictoryReached());
 
-        // Игрок поглотил ёмкость: 650т против 620т у конкурентов
+        // Игрок поглотил ёмкость: 650т против остального рынка
         market.setPlayerCapacity(650000);
-        // Total = 650000 + 620000 = 1270000 → share = 650/1270 ≈ 51.2%
+        // Share = 650000 / 1270000 ≈ 51.2%
         CHECK(market.getMarketShare() > 51.0);
         CHECK(market.isVictoryReached());
     }
 
     SUBCASE("Событие победы") {
-        market.setCompetitorCapacity("comp_1", 10000);
+        // Фиксированная ёмкость 20000 для простоты теста
+        MarketSystem market2(bus, 20000.0);
 
         bool victoryTriggered = false;
         double finalShare = 0.0;
@@ -158,10 +155,10 @@ TEST_CASE("MarketSystem: victory condition") {
             });
 
         // Переход через 51%
-        market.setPlayerCapacity(9000); // 9000/(9000+10000) = 47.4% — ещё нет
+        market2.setPlayerCapacity(9000); // 9000/20000 = 45% — ещё нет
         CHECK_FALSE(victoryTriggered);
 
-        market.setPlayerCapacity(11000); // 11000/(11000+10000) = 52.4% — победа!
+        market2.setPlayerCapacity(11000); // 11000/20000 = 55% — победа!
         CHECK(victoryTriggered);
         CHECK(finalShare > 51.0);
     }
