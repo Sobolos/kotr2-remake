@@ -5,8 +5,8 @@ namespace kotr::market {
 
     using namespace kotr::core;
 
-    MarketSystem::MarketSystem(EventBus& eventBus)
-        : eventBus_(eventBus) {}
+    MarketSystem::MarketSystem(EventBus& eventBus, double totalMarketCapacityKg)
+        : eventBus_(eventBus), totalMarketCapacityKg_(totalMarketCapacityKg) {}
 
     void MarketSystem::setPlayerCapacity(double capacityKg) {
         playerCapacityKg_ = capacityKg;
@@ -33,15 +33,11 @@ namespace kotr::market {
     }
 
     double MarketSystem::getMarketShare() const {
-        double total = getTotalMarketCapacity();
-        if (total <= 0.0) return 0.0;
-        return (playerCapacityKg_ / total) * 100.0;
+        if (totalMarketCapacityKg_ <= 0.0) return 0.0;
+        return (playerCapacityKg_ / totalMarketCapacityKg_) * 100.0;
     }
 
-    double MarketSystem::getTotalMarketCapacity() const {
-        double competitorTotal = getCompetitorCapacity();
-        return playerCapacityKg_ + competitorTotal;
-    }
+    // getTotalMarketCapacity() теперь inline в заголовочном файле: возвращает totalMarketCapacityKg_
 
     double MarketSystem::getCompetitorCapacity() const {
         double total = 0.0;

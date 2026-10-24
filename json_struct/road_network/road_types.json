@@ -1,0 +1,194 @@
+{
+  "version": "0.1",
+  "schema": "kotr.road_types.v1",
+  "types": [
+    {
+      "id": "rtype_a",
+      "name_key": "loc.road.type.a",
+      "class": "A",
+      "width_m": 18.0,
+      "speed_limit_kmh": 110.0,
+      "danger_base": 0.05,
+      "surface_default": "asphalt",
+      "traffic_density": 0.9,
+      "curvature": 0.1,
+      "patrol_frequency": 0.8,
+      "visibility": "open",
+      "max_weight_t": 40.0,
+      "risk_multipliers": {
+        "weather_rain": 1.3,
+        "weather_snow": 2.0,
+        "weather_fog": 1.5,
+        "night": 1.2,
+        "faction_hostile": 1.5,
+        "convoy_heavy": 1.1
+      },
+      "repair_slot_range": [
+        1,
+        3
+      ],
+      "tags": [
+        "Route.Major"
+      ]
+    },
+    {
+      "id": "rtype_b",
+      "name_key": "loc.road.type.b",
+      "class": "B",
+      "width_m": 12.0,
+      "speed_limit_kmh": 90.0,
+      "danger_base": 0.1,
+      "surface_default": "asphalt",
+      "traffic_density": 0.7,
+      "curvature": 0.25,
+      "patrol_frequency": 0.6,
+      "visibility": "open",
+      "max_weight_t": 40.0,
+      "risk_multipliers": {
+        "weather_rain": 1.4,
+        "weather_snow": 2.2,
+        "weather_fog": 1.6,
+        "night": 1.3,
+        "faction_hostile": 1.7,
+        "convoy_heavy": 1.15
+      },
+      "repair_slot_range": [
+        1,
+        3
+      ],
+      "tags": []
+    },
+    {
+      "id": "rtype_c",
+      "name_key": "loc.road.type.c",
+      "class": "C",
+      "width_m": 6.0,
+      "speed_limit_kmh": 90.0,
+      "danger_base": 0.2,
+      "surface_default": "asphalt",
+      "traffic_density": 0.4,
+      "curvature": 0.4,
+      "patrol_frequency": 0.4,
+      "visibility": "open",
+      "max_weight_t": 30.0,
+      "risk_multipliers": {
+        "weather_rain": 1.5,
+        "weather_snow": 2.5,
+        "weather_fog": 1.8,
+        "night": 1.4,
+        "faction_hostile": 2.0,
+        "convoy_heavy": 1.2
+      },
+      "repair_slot_range": [
+        1,
+        3
+      ],
+      "tags": []
+    },
+    {
+      "id": "rtype_d",
+      "name_key": "loc.road.type.d",
+      "class": "D",
+      "width_m": 6.0,
+      "speed_limit_kmh": 70.0,
+      "danger_base": 0.35,
+      "surface_default": "asphalt",
+      "traffic_density": 0.25,
+      "curvature": 0.5,
+      "patrol_frequency": 0.3,
+      "visibility": "forest",
+      "max_weight_t": 20.0,
+      "risk_multipliers": {
+        "weather_rain": 1.6,
+        "weather_snow": 2.8,
+        "weather_fog": 2.0,
+        "night": 1.6,
+        "faction_hostile": 2.2,
+        "convoy_heavy": 1.3
+      },
+      "repair_slot_range": [
+        1,
+        3
+      ],
+      "tags": []
+    },
+    {
+      "id": "rtype_e",
+      "name_key": "loc.road.type.e",
+      "class": "E",
+      "width_m": 6.0,
+      "speed_limit_kmh": 50.0,
+      "danger_base": 0.5,
+      "surface_default": "gravel",
+      "traffic_density": 0.1,
+      "curvature": 0.6,
+      "patrol_frequency": 0.1,
+      "visibility": "forest",
+      "max_weight_t": 15.0,
+      "risk_multipliers": {
+        "weather_rain": 2.0,
+        "weather_snow": 3.5,
+        "weather_fog": 2.5,
+        "night": 2.0,
+        "faction_hostile": 2.8,
+        "convoy_heavy": 1.5
+      },
+      "repair_slot_range": [
+        1,
+        3
+      ],
+      "tags": []
+    },
+    {
+      "id": "rtype_f",
+      "name_key": "loc.road.type.s",
+      "class": "S",
+      "width_m": 3.0,
+      "speed_limit_kmh": 40.0,
+      "danger_base": 0.7,
+      "surface_default": "dirt",
+      "traffic_density": 0.02,
+      "curvature": 0.8,
+      "patrol_frequency": 0.0,
+      "visibility": "forest",
+      "max_weight_t": 10.0,
+      "risk_multipliers": {
+        "weather_rain": 2.5,
+        "weather_snow": 4.0,
+        "weather_fog": 3.0,
+        "night": 2.5,
+        "faction_hostile": 3.0,
+        "convoy_heavy": 2.0
+      },
+      "repair_slot_range": [
+        1,
+        3
+      ],
+      "tags": [
+        "Route.Secret"
+      ]
+    },
+    {
+      "id": "rtype_ramp",
+      "name_key": "loc.road.type.ramp",
+      "class": "RAMP",
+      "width_m": 4.0,
+      "speed_limit_kmh": 40,
+      "danger_base": 0.25,
+      "surface_default": "asphalt",
+      "traffic_density": 0.3,
+      "curvature": 0.7,
+      "patrol_frequency": 0.4,
+      "visibility": "open",
+      "max_weight_t": 40,
+      "risk_multipliers": {},
+      "repair_slot_range": [
+        0,
+        1
+      ],
+      "tags": [
+        "Route.Ramp"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "version": "0.1",
+  "schema": "kotr.risk_points.v1",
+  "pockets": [
+    {
+      "id": "pocket_roadworks_edge_a_m1_02",
+      "edge_ref": "edge_a_m1_02",
+      "position_m": 960,
+      "pocket_type": "roadblock",
+      "risk_tags": [
+        "Road.Repair",
+        "Bandit.Ambush.night"
+      ],
+      "base_chance": 0.25,
+      "active_conditions": {
+        "night_only": true
+      },
+      "cooldown_min_game_minutes": 1440,
+      "linked_event_template": "evt_roadworks_slowdown"
+    },
+    {
+      "id": "pocket_checkpoint_edge_a_m1_04_1",
+      "edge_ref": "edge_a_m1_04",
+      "position_m": 3500,
+      "pocket_type": "checkpoint",
+      "risk_tags": [
+        "Police.Checkpoint"
+      ],
+      "base_chance": 0.9,
+      "active_conditions": {
+        "always": true
+      },
+      "cooldown_min_game_minutes": 0,
+      "linked_event_template": "evt_police_checkpoint"
+    },
+    {
+      "id": "pocket_roadworks_bridge_a_m1_2",
+      "edge_ref": "bridge_a_m1_2",
+      "position_m": 315,
+      "pocket_type": "roadblock",
+      "risk_tags": [
+        "Road.Repair",
+        "Bandit.Ambush.night"
+      ],
+      "base_chance": 0.25,
+      "active_conditions": {
+        "night_only": true
+      },
+      "cooldown_min_game_minutes": 1440,
+      "linked_event_template": "evt_roadworks_slowdown"
+    },
+    {
+      "id": "pocket_roadworks_edge_a_m1_06",
+      "edge_ref": "edge_a_m1_06",
+      "position_m": 2100,
+      "pocket_type": "roadblock",
+      "risk_tags": [
+        "Road.Repair",
+        "Bandit.Ambush.night"
+      ],
+      "base_chance": 0.25,
+      "active_conditions": {
+        "night_only": true
+      },
+      "cooldown_min_game_minutes": 1440,
+      "linked_event_template": "evt_roadworks_slowdown"
+    },
+    {
+      "id": "pocket_checkpoint_edge_b_m3_02_2",
+      "edge_ref": "edge_b_m3_02",
+      "position_m": 2070,
+      "pocket_type": "checkpoint",
+      "risk_tags": [
+        "Police.Checkpoint"
+      ],
+      "base_chance": 0.9,
+      "active_conditions": {
+        "always": true
+      },
+      "cooldown_min_game_minutes": 0,
+      "linked_event_template": "evt_police_checkpoint"
+    },
+    {
+      "id": "pocket_roadworks_edge_b_m2_10",
+      "edge_ref": "edge_b_m2_10",
+      "position_m": 4000,
+      "pocket_type": "roadblock",
+      "risk_tags": [
+        "Road.Repair",
+        "Bandit.Ambush.night"
+      ],
+      "base_chance": 0.25,
+      "active_conditions": {
+        "night_only": true
+      },
+      "cooldown_min_game_minutes": 1440,
+      "linked_event_template": "evt_roadworks_slowdown"
+    },
+    {
+      "id": "pocket_roadworks_edge_c_e2_02",
+      "edge_ref": "edge_c_e2_02",
+      "position_m": 2400,
+      "pocket_type": "roadblock",
+      "risk_tags": [
+        "Road.Repair",
+        "Bandit.Ambush.night"
+      ],
+      "base_chance": 0.25,
+      "active_conditions": {
+        "night_only": true
+      },
+      "cooldown_min_game_minutes": 1440,
+      "linked_event_template": "evt_roadworks_slowdown"
+    },
+    {
+      "id": "pocket_checkpoint_edge_c_e2_08_3",
+      "edge_ref": "edge_c_e2_08",
+      "position_m": 1500,
+      "pocket_type": "checkpoint",
+      "risk_tags": [
+        "Police.Checkpoint"
+      ],
+      "base_chance": 0.9,
+      "active_conditions": {
+        "always": true
+      },
+      "cooldown_min_game_minutes": 0,
+      "linked_event_template": "evt_police_checkpoint"
+    }
+  ]
+}

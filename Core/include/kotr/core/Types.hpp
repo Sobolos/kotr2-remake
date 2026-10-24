@@ -12,6 +12,18 @@ using Money = int64_t;
 // Время: игровые минуты, int64
 using GameMinutes = int64_t;
 
+// Длина: метры
+using Meters = double;
+
+// Масса: килограммы
+using Kilograms = double;
+
+// Расстояние: километры (для дорог)
+using Kilometers = double;
+
+// Объём топлива: литры
+using Liters = double;
+
 // Вероятность: 0.0 – 1.0
 using Probability = double;
 
