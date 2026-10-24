@@ -95,7 +95,7 @@ E. SaveSystem (фаза 11): сериализация всех состояни�
 
 ## 5. Роадмап
 - Фаза 8: RiskSystem light — PoliceHeat (0–100, быстрый распад), BanditPressure, базовый ThreatDirector (ThreatMeter, пороги 15/35/60/90), правила милосердия; интеграция с ContractSystem (route_risk) и RadioSystem-заглушкой.
-- Фаза 9: RoadGraph + перевод ContractSystem/агентов на граф.
+- Фаза 9: RoadGraph + перевод ContractSystem/агентов на граф. ПРОГРЕСС: граф собран в `json_struct/road_network/` (типы дорог вынесены в отдельный JSON). Формат данных зафиксирован в доке `doc/Этап 3/Road Network JSON Format.md`. Далее: poi.json → zones/risk_points → модуль `kotr::roads` (RoadGraphLoader, RouteService/Dijkstra, валидатор связности) → пересадка контрактов/агентов с евклидовых расстояний на граф.
 - Фаза 10: Visualizer. Фаза 11: SaveSystem. Далее FactionSystem, RadioSystem, Narrative.
 
 ## 6. Баланс-константы (из Balance Prototype, стартовые)

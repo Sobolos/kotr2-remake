@@ -1,0 +1,94 @@
+{
+  "version": "0.1",
+  "schema": "kotr.repair_slots.v1",
+  "slots": [
+    {
+      "id": "rpnt_edge_a_m1_02_1",
+      "edge_ref": "edge_a_m1_02",
+      "t": 0.3,
+      "lane_side": "left",
+      "closed_lanes": 1,
+      "speed_through_kmh": 20,
+      "detour_edge_refs": [],
+      "event_id": null,
+      "risk_multiplier_when_active": 1.3
+    },
+    {
+      "id": "rpnt_edge_a_m1_02_2",
+      "edge_ref": "edge_a_m1_02",
+      "t": 0.35,
+      "lane_side": "right",
+      "closed_lanes": 1,
+      "speed_through_kmh": 20,
+      "detour_edge_refs": [],
+      "event_id": null,
+      "risk_multiplier_when_active": 1.3
+    },
+    {
+      "id": "rpnt_bridge_a_m1_2_3",
+      "edge_ref": "bridge_a_m1_2",
+      "t": 0.45,
+      "lane_side": "left",
+      "closed_lanes": 1,
+      "speed_through_kmh": 20,
+      "detour_edge_refs": [],
+      "event_id": null,
+      "risk_multiplier_when_active": 1.3
+    },
+    {
+      "id": "rpnt_bridge_a_m1_2_4",
+      "edge_ref": "bridge_a_m1_2",
+      "t": 0.65,
+      "lane_side": "right",
+      "closed_lanes": 1,
+      "speed_through_kmh": 20,
+      "detour_edge_refs": [],
+      "event_id": null,
+      "risk_multiplier_when_active": 1.3
+    },
+    {
+      "id": "rpnt_edge_a_m1_06_5",
+      "edge_ref": "edge_a_m1_06",
+      "t": 0.5,
+      "lane_side": "right",
+      "closed_lanes": 1,
+      "speed_through_kmh": 20,
+      "detour_edge_refs": [],
+      "event_id": null,
+      "risk_multiplier_when_active": 1.3
+    },
+    {
+      "id": "rpnt_edge_b_m2_10_6",
+      "edge_ref": "edge_b_m2_10",
+      "t": 0.5,
+      "lane_side": "left",
+      "closed_lanes": 1,
+      "speed_through_kmh": 20,
+      "detour_edge_refs": [],
+      "event_id": null,
+      "risk_multiplier_when_active": 1.3
+    },
+    {
+      "id": "rpnt_edge_c_e2_02_7",
+      "edge_ref": "edge_c_e2_02",
+      "t": 0.4,
+      "lane_side": "left",
+      "closed_lanes": 1,
+      "speed_through_kmh": 20,
+      "detour_edge_refs": [],
+      "event_id": null,
+      "risk_multiplier_when_active": 1.3
+    },
+    {
+      "id": "rpnt_edge_c_e2_02_8",
+      "edge_ref": "edge_c_e2_02",
+      "t": 0.75,
+      "lane_side": "right",
+      "closed_lanes": 1,
+      "speed_through_kmh": 20,
+      "detour_edge_refs": [],
+      "event_id": null,
+      "risk_multiplier_when_active": 1.3
+    }
+  ]
+}

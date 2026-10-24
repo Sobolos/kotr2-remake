@@ -217,6 +217,22 @@ HireCost = signing_bonus + vehicle_buyout + license_or_progression_cost + initia
 
 **Статус**: ✅ В работе, не требует изменений сейчас
 
+**Инфраструктура переноса с PNG-карты (создано 25.10.2026)**:
+- `tools/png2graph.py` — конвейер по методике «Road Network JSON Format.md» §11:
+  `calibrate` (m_per_px по 2 опорным городам + контроль невязки ≤2%) →
+  `trace` (трассировка дорог кликами, GUI или headless `--no-gui --paths`) →
+  `export` (пиксели→метры, GeoJSON+CSV, тайлы World Partition) →
+  `validate` (length_m ≥ euclid, §9.3).
+- `json_struct/road_network/road_types.json` — справочник классов A–F (§3 формата).
+- `json_struct/road_network/network.json` — заготовка: 11 city-узлов + узел Кольца
+  (координаты из Road Network Design §2); `edges` заполняется после трассировки PNG.
+
+**Очередность (по §10)**: обмер PNG → рёбра в network.json → валидатор шагов 1–3 →
+poi.json (товарные базы + нефтебазы в каждом городе — обязательные источники контрактов) →
+zones.json + risk_points.json → модуль `kotr::roads` (RoadGraphLoader, RouteService/Dijkstra,
+KotRTestRoadNetwork) → перевод ContractSystem.calcDistance и DriverAgentSystem со «евклид ×1.3»
+на граф → тулза экспорта геометрии в UE (§8).
+
 ---
 
 ### 10. VehicleSystem — упрощённая модель

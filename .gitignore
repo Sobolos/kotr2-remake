@@ -1,55 +1,19 @@
-```
-# Build artifacts
 *.o
 *.obj
 *.a
-*.lib
 *.so
 *.dll
-*.dylib
 *.exe
 *.out
-
-# C++ specific
-*.ilk
-*.pdb
-*.gch
-*.ii
-*.i
-*.s
-
-# Directories
 build/
 dist/
-bin/
-obj/
-*.dSYM/
-
-# Dependencies
-vendor/
-
-# Logs
+__pycache__/
+*.pyc
+.venv/
+venv/
 *.log
-
-# Temporary files
 *.tmp
-*~
-.swp
-.swo
-
-# Environment
-.env
-.env.local
-*.env.*
-
-# Coverage
-coverage/
-htmlcov/
-.coverage
-
-# Editor/IDE
-.vscode/
-.idea/
 *.swp
 *.swo
-```
+.vscode/
+.idea/

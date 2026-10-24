@@ -1,0 +1,1070 @@
+{
+  "version": "0.1",
+  "schema": "kotr.poi.v1",
+  "pois": [
+    {
+      "id": "poi_fuel_depot_edge_a_m1_02_1",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_a_m1_02",
+        "position_m": 1440
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_a_m1_02_1.name"
+    },
+    {
+      "id": "poi_road_repairing_edge_a_m1_02_1",
+      "type": "road_repairing",
+      "anchor": {
+        "edge_ref": "edge_a_m1_02",
+        "position_m": 1120
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_road_repairing_edge_a_m1_02_1.name"
+    },
+    {
+      "id": "poi_police_car_stop_edge_a_m1_02_1",
+      "type": "police_car_stop",
+      "anchor": {
+        "edge_ref": "edge_a_m1_02",
+        "position_m": 1536
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_police_car_stop_edge_a_m1_02_1.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_a_m1_04_2",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_a_m1_04",
+        "position_m": 1050
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_a_m1_04_2.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_a_m1_04_3",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_a_m1_04",
+        "position_m": 1750
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_a_m1_04_3.name"
+    },
+    {
+      "id": "poi_police_post_edge_a_m1_04_1",
+      "type": "police_post",
+      "anchor": {
+        "edge_ref": "edge_a_m1_04",
+        "position_m": 3500
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_police_post_edge_a_m1_04_1.name",
+      "radius_m": 300
+    },
+    {
+      "id": "poi_service_station_edge_a_m1_05_1",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "edge_a_m1_05",
+        "position_m": 450
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_edge_a_m1_05_1.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_a_m1_05_4",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_a_m1_05",
+        "position_m": 4050
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_a_m1_05_4.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_a_m1_05_5",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_a_m1_05",
+        "position_m": 3600
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_a_m1_05_5.name"
+    },
+    {
+      "id": "poi_police_post_edge_b_m3_02_2",
+      "type": "police_post",
+      "anchor": {
+        "edge_ref": "edge_b_m3_02",
+        "position_m": 2070
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_police_post_edge_b_m3_02_2.name",
+      "radius_m": 300
+    },
+    {
+      "id": "poi_fuel_depot_edge_c_m3_06_6",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_c_m3_06",
+        "position_m": 1650
+      },
+      "city_ref": "city_shahty",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_c_m3_06_6.name"
+    },
+    {
+      "id": "poi_service_station_edge_c_m3_06_2",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "edge_c_m3_06",
+        "position_m": 4950
+      },
+      "city_ref": "city_shahty",
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_edge_c_m3_06_2.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_b_m3_09_7",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_b_m3_09",
+        "position_m": 100
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_b_m3_09_7.name"
+    },
+    {
+      "id": "poi_service_station_edge_b_m3_09_3",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "edge_b_m3_09",
+        "position_m": 400
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_edge_b_m3_09_3.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_b_m3_09_1",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_b_m3_09",
+        "position_m": 250
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_b_m3_09_1.name"
+    },
+    {
+      "id": "poi_service_station_edge_b_m2_05_4",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "edge_b_m2_05",
+        "position_m": 400
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_edge_b_m2_05_4.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_b_m2_05_2",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_b_m2_05",
+        "position_m": 250
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_b_m2_05_2.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_b_m2_07_3",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_b_m2_07",
+        "position_m": 1500
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_b_m2_07_3.name"
+    },
+    {
+      "id": "poi_police_car_stop_edge_b_m2_07_2",
+      "type": "police_car_stop",
+      "anchor": {
+        "edge_ref": "edge_b_m2_07",
+        "position_m": 1800
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_police_car_stop_edge_b_m2_07_2.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_b_m2_10_8",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_b_m2_10",
+        "position_m": 6800
+      },
+      "city_ref": "city_priozersk",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_b_m2_10_8.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_b_m2_10_4",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_b_m2_10",
+        "position_m": 6000
+      },
+      "city_ref": "city_priozersk",
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_b_m2_10_4.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_b_m2_10_5",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_b_m2_10",
+        "position_m": 1600
+      },
+      "city_ref": "city_priozersk",
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_b_m2_10_5.name"
+    },
+    {
+      "id": "poi_service_station_edge_b_m2_10_5",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "edge_b_m2_10",
+        "position_m": 3200
+      },
+      "city_ref": "city_priozersk",
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_edge_b_m2_10_5.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_b_m2_10_6",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_b_m2_10",
+        "position_m": 3600
+      },
+      "city_ref": "city_priozersk",
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_b_m2_10_6.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_b_m2_10_7",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_b_m2_10",
+        "position_m": 3600
+      },
+      "city_ref": "city_priozersk",
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_b_m2_10_7.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_b_m2_10_8",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_b_m2_10",
+        "position_m": 4000
+      },
+      "city_ref": "city_priozersk",
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_b_m2_10_8.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_b_m2_10_9",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_b_m2_10",
+        "position_m": 4000
+      },
+      "city_ref": "city_priozersk",
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_b_m2_10_9.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_b_m2_12_9",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_b_m2_12",
+        "position_m": 850
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_b_m2_12_9.name"
+    },
+    {
+      "id": "poi_police_car_stop_edge_b_m2_13_3",
+      "type": "police_car_stop",
+      "anchor": {
+        "edge_ref": "edge_b_m2_13",
+        "position_m": 1375
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_police_car_stop_edge_b_m2_13_3.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_c_e1_04_10",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_c_e1_04",
+        "position_m": 1170
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_c_e1_04_10.name"
+    },
+    {
+      "id": "poi_service_station_t-cross-e1-e1_01_6",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "t-cross-e1-e1_01",
+        "position_m": 510
+      },
+      "city_ref": "city_zalessk",
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_t-cross-e1-e1_01_6.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_c_e1_08_11",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_c_e1_08",
+        "position_m": 2070
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_c_e1_08_11.name"
+    },
+    {
+      "id": "poi_service_station_edge_c_e1_09_7",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "edge_c_e1_09",
+        "position_m": 2150
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_edge_c_e1_09_7.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_c_e1_09_10",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_c_e1_09",
+        "position_m": 2150
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_c_e1_09_10.name"
+    },
+    {
+      "id": "poi_service_station_edge_c_e1_11_8",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "edge_c_e1_11",
+        "position_m": 2700
+      },
+      "city_ref": "city_yelnino",
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_edge_c_e1_11_8.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_turquoise_e1_14_12",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_turquoise_e1_14",
+        "position_m": 400
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_turquoise_e1_14_12.name"
+    },
+    {
+      "id": "poi_fuel_depot_edge_c_e2_01_13",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_c_e2_01",
+        "position_m": 100
+      },
+      "city_ref": "city_nizhnegorsk",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_edge_c_e2_01_13.name"
+    },
+    {
+      "id": "poi_service_station_edge_c_e2_08_9",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "edge_c_e2_08",
+        "position_m": 500
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_edge_c_e2_08_9.name"
+    },
+    {
+      "id": "poi_police_post_edge_c_e2_08_3",
+      "type": "police_post",
+      "anchor": {
+        "edge_ref": "edge_c_e2_08",
+        "position_m": 1500
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_police_post_edge_c_e2_08_3.name",
+      "radius_m": 300
+    },
+    {
+      "id": "poi_custom_poi_edge_d_e4_01_11",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_d_e4_01",
+        "position_m": 2850
+      },
+      "city_ref": "city_podgorsk",
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_d_e4_01_11.name"
+    },
+    {
+      "id": "poi_service_station_edge_d_e4_01_10",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "edge_d_e4_01",
+        "position_m": 300
+      },
+      "city_ref": "city_podgorsk",
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_edge_d_e4_01_10.name"
+    },
+    {
+      "id": "poi_custom_poi_edge_d_e4_01_12",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "edge_d_e4_01",
+        "position_m": 1500
+      },
+      "city_ref": "city_podgorsk",
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_edge_d_e4_01_12.name"
+    },
+    {
+      "id": "poi_fuel_depot_Yuzhniy_bypass_01_14",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "Yuzhniy_bypass_01",
+        "position_m": 120
+      },
+      "city_ref": "city_yuzhniy",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_Yuzhniy_bypass_01_14.name"
+    },
+    {
+      "id": "poi_fuel_depot_Yuzhniy_bypass_01_15",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "Yuzhniy_bypass_01",
+        "position_m": 660
+      },
+      "city_ref": "city_yuzhniy",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_Yuzhniy_bypass_01_15.name"
+    },
+    {
+      "id": "poi_commodity_base_Yuzhniy_bypass_01_1",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "Yuzhniy_bypass_01",
+        "position_m": 420
+      },
+      "city_ref": "city_yuzhniy",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_Yuzhniy_bypass_01_1.name"
+    },
+    {
+      "id": "poi_service_station_Yuzhniy_bypass_01_11",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "Yuzhniy_bypass_01",
+        "position_m": 240
+      },
+      "city_ref": "city_yuzhniy",
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_Yuzhniy_bypass_01_11.name"
+    },
+    {
+      "id": "poi_custom_poi_Yuzhniy_bypass_01_13",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "Yuzhniy_bypass_01",
+        "position_m": 1140
+      },
+      "city_ref": "city_yuzhniy",
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_Yuzhniy_bypass_01_13.name"
+    },
+    {
+      "id": "poi_fuel_depot_Zalessk_bypass_01_16",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "Zalessk_bypass_01",
+        "position_m": 359
+      },
+      "city_ref": "city_zalessk",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_Zalessk_bypass_01_16.name"
+    },
+    {
+      "id": "poi_commodity_base_Zalessk_bypass_01_2",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "Zalessk_bypass_01",
+        "position_m": 86
+      },
+      "city_ref": "city_zalessk",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_Zalessk_bypass_01_2.name"
+    },
+    {
+      "id": "poi_custom_poi_Zalessk_bypass_01_14",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "Zalessk_bypass_01",
+        "position_m": 542
+      },
+      "city_ref": "city_zalessk",
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_Zalessk_bypass_01_14.name"
+    },
+    {
+      "id": "poi_fuel_depot_Elnino_bypass_04_17",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "Elnino_bypass_04",
+        "position_m": 788
+      },
+      "city_ref": "city_yelnino",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_Elnino_bypass_04_17.name"
+    },
+    {
+      "id": "poi_commodity_base_Kluchi_bypass_01_3",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "Kluchi_bypass_01",
+        "position_m": 285
+      },
+      "city_ref": "city_kluchi",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_Kluchi_bypass_01_3.name"
+    },
+    {
+      "id": "poi_commodity_base_buhta_ringroad_02_4",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "buhta_ringroad_02",
+        "position_m": 600
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_buhta_ringroad_02_4.name"
+    },
+    {
+      "id": "poi_service_station_buhta_ringroad_02_12",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "buhta_ringroad_02",
+        "position_m": 1000
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_buhta_ringroad_02_12.name"
+    },
+    {
+      "id": "poi_commodity_base_priozersk_ringroad_01_5",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "priozersk_ringroad_01",
+        "position_m": 180
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_priozersk_ringroad_01_5.name"
+    },
+    {
+      "id": "poi_custom_poi_priozersk_ringroad_02_15",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "priozersk_ringroad_02",
+        "position_m": 125
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_priozersk_ringroad_02_15.name"
+    },
+    {
+      "id": "poi_commodity_base_Podgorsk_ringroad_01_6",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "Podgorsk_ringroad_01",
+        "position_m": 268
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_Podgorsk_ringroad_01_6.name"
+    },
+    {
+      "id": "poi_custom_poi_Podgorsk_ringroad_01_16",
+      "type": "custom_poi",
+      "anchor": {
+        "edge_ref": "Podgorsk_ringroad_01",
+        "position_m": 335
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [],
+      "name_key": "loc.poi.poi_custom_poi_Podgorsk_ringroad_01_16.name"
+    },
+    {
+      "id": "poi_commodity_base_Shahty_road_01_7",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "Shahty_road_01",
+        "position_m": 50
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_Shahty_road_01_7.name"
+    },
+    {
+      "id": "poi_fuel_depot_borovoe_bypass_01_18",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "borovoe_bypass_01",
+        "position_m": 60
+      },
+      "city_ref": "city_borovoe",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_borovoe_bypass_01_18.name"
+    },
+    {
+      "id": "poi_commodity_base_borovoe_bypass_04_8",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "borovoe_bypass_04",
+        "position_m": 140
+      },
+      "city_ref": null,
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_borovoe_bypass_04_8.name"
+    },
+    {
+      "id": "poi_service_station_borovoe_bypass_04_13",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "borovoe_bypass_04",
+        "position_m": 300
+      },
+      "city_ref": null,
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_borovoe_bypass_04_13.name"
+    },
+    {
+      "id": "poi_service_station_nizhnegorsk_bypass_01_14",
+      "type": "service_station",
+      "anchor": {
+        "edge_ref": "nizhnegorsk_bypass_01",
+        "position_m": 360
+      },
+      "city_ref": "city_nizhnegorsk",
+      "contract_source": false,
+      "services": [
+        "repair",
+        "parts"
+      ],
+      "name_key": "loc.poi.poi_service_station_nizhnegorsk_bypass_01_14.name"
+    },
+    {
+      "id": "poi_commodity_base_Almazniy_north_gate_01_9",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "Almazniy_north_gate_01",
+        "position_m": 285
+      },
+      "city_ref": "city_almazniy",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_Almazniy_north_gate_01_9.name"
+    },
+    {
+      "id": "poi_commodity_base_yelnino_auto",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "edge_c_e1_10",
+        "position_m": 1000
+      },
+      "city_ref": "city_yelnino",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_yelnino_auto.name",
+      "auto_placed": true
+    },
+    {
+      "id": "poi_fuel_depot_kluchi_auto",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_white_g1_03",
+        "position_m": 750
+      },
+      "city_ref": "city_kluchi",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_kluchi_auto.name",
+      "auto_placed": true
+    },
+    {
+      "id": "poi_commodity_base_buhta_auto",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "edge_b_m2_14",
+        "position_m": 50
+      },
+      "city_ref": "city_buhta",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_buhta_auto.name",
+      "auto_placed": true
+    },
+    {
+      "id": "poi_fuel_depot_buhta_auto",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_b_m2_14",
+        "position_m": 50
+      },
+      "city_ref": "city_buhta",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_buhta_auto.name",
+      "auto_placed": true
+    },
+    {
+      "id": "poi_commodity_base_priozersk_auto",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "edge_b_m2_09",
+        "position_m": 600
+      },
+      "city_ref": "city_priozersk",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_priozersk_auto.name",
+      "auto_placed": true
+    },
+    {
+      "id": "poi_commodity_base_podgorsk_auto",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "edge_d_e4_01",
+        "position_m": 1500
+      },
+      "city_ref": "city_podgorsk",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_podgorsk_auto.name",
+      "auto_placed": true
+    },
+    {
+      "id": "poi_fuel_depot_podgorsk_auto",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_d_e4_01",
+        "position_m": 1500
+      },
+      "city_ref": "city_podgorsk",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_podgorsk_auto.name",
+      "auto_placed": true
+    },
+    {
+      "id": "poi_commodity_base_shahty_auto",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "edge_c_m3_06",
+        "position_m": 5500
+      },
+      "city_ref": "city_shahty",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_shahty_auto.name",
+      "auto_placed": true
+    },
+    {
+      "id": "poi_commodity_base_borovoe_auto",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "edge_b_m3_04",
+        "position_m": 750
+      },
+      "city_ref": "city_borovoe",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_borovoe_auto.name",
+      "auto_placed": true
+    },
+    {
+      "id": "poi_commodity_base_nizhnegorsk_auto",
+      "type": "commodity_base",
+      "anchor": {
+        "edge_ref": "edge_c_e2_01",
+        "position_m": 500
+      },
+      "city_ref": "city_nizhnegorsk",
+      "contract_source": true,
+      "services": [
+        "load",
+        "unload",
+        "contract_board"
+      ],
+      "name_key": "loc.poi.poi_commodity_base_nizhnegorsk_auto.name",
+      "auto_placed": true
+    },
+    {
+      "id": "poi_fuel_depot_almazniy_auto",
+      "type": "fuel_depot",
+      "anchor": {
+        "edge_ref": "edge_white_g2_14",
+        "position_m": 1500
+      },
+      "city_ref": "city_almazniy",
+      "contract_source": true,
+      "services": [
+        "refuel"
+      ],
+      "name_key": "loc.poi.poi_fuel_depot_almazniy_auto.name",
+      "auto_placed": true
+    }
+  ]
+}

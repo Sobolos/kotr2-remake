@@ -173,7 +173,7 @@
   - from: bridge_b_m3_1_2
   - to: t-cross_m3_e4
   - class: B
-  - length_km: 2,3
+  - length_km: 2.3
   - note: Нерегулируемый поворот на Подгорск
   - poi: 
     - police_01_edge_b_m3_02
@@ -219,12 +219,12 @@
     - gas_station_b_01
       - name: gas_station_b_01
       - type: gas_station
-      - location: 0,15
+      - location: 0.15
       - side: left
     - service_station_b_01
       - name: service_station_b_01
       - type: service_station
-      - location: 0,45
+      - location: 0.45
       - side: left
   - poi:
       - police_m3_06
@@ -320,14 +320,14 @@
   - from: west_north_end_map
   - to: t_cross_m2_e1
   - class: B
-  - length_km: 0,625
+  - length_km: 0.625
   - note: Граница региона на Юго-Западе
 
 - id: edge_b_m2_02
   - from: t_cross_m2_e1
   - to: west_yuzhniy_gate_01
   - class: B
-  - length_km: 0,355
+  - length_km: 0.355
   - note: Западный въезд в южный
 
 - id: edge_b_m2_03
@@ -360,7 +360,7 @@
   - from: x-cross-m3-m2-1
   - to: t-cross-m2-m2-1
   - class: B
-  - length_km: 0,5
+  - length_km: 0.5
   - note: перекресток Шахты-Южный-Приозерск-Залесск
   - poi:
     - service_station_m2_01
@@ -378,7 +378,7 @@
   - from: t-cross-m2-m2-1
   - to: t-cross-m3-m2-2
   - class: B
-  - length_km: 0,3
+  - length_km: 0.3
   - note: перекресток Шахты-Южный-Приозерск-Залесск
 
 - id: edge_b_m2_07
@@ -482,7 +482,7 @@
   - from: brige_b_m2_03_1
   - to: brige_b_m2_03_2
   - class: A
-  - length_km: 0,5
+  - length_km: 0.5
   - note: Мост на трассе М2
 
 - id: edge_b_m2_11
@@ -519,7 +519,7 @@
   - from: intersection_m2_e4_01
   - to: brige_b_m2_04_1
   - class: A
-  - length_km: 2,5
+  - length_km: 2.5
   - note: мост на М2 к югу от Бухты
   - poi: 
    - parking_808
@@ -535,7 +535,7 @@
   - from: brige_b_m2_04_1
   - to: brige_b_m2_04_2
   - class: A
-  - length_km: 0,7
+  - length_km: 0.7
   - note: мост на М2 к югу от Бухты
 
 - id: edge_b_m2_14
@@ -549,14 +549,14 @@
   - from: buhta_north_gate_01
   - to: brige_b_m2_05_1
   - class: A
-  - length_km: 0,1
+  - length_km: 0.1
   - note: мост на М3 к северу от Бухты
 
 - id: brige_b_m2_05
   - from: brige_b_m2_05_1
   - to: brige_b_m2_05_2
   - class: B
-  - length_km: 0,7
+  - length_km: 0.7
   - note: мост на М3 к северу от Бухты
 
 - id: edge_b_m2_16
@@ -608,7 +608,7 @@
   - from: bridge_c_e1_02_01
   - to: bridge_c_e1_02_02
   - class: C
-  - length_km: 0,15
+  - length_km: 0.15
   - note: Мост на трассе Е1 к Югу от Залесска
 
 - id: edge_c_e1_04
@@ -641,7 +641,7 @@
   - from: Zalessk_north_gate_01
   - to: bridge_c_e1_03_01
   - class: C
-  - length_km: 4,5
+  - length_km: 4.5
   - note: Северный въезд в Залессск
   - poi:
       - police_e1_06
@@ -653,7 +653,7 @@
   - from: bridge_c_e1_03_01
   - to: bridge_c_e1_03_02
   - class: C
-  - length_km: 0,1
+  - length_km: 0.1
   - note: Мост к северу от Залесска
 
 - id: edge_c_e1_07
@@ -714,7 +714,7 @@
   - from: bridge_c_e1_05_01
   - to: bridge_c_e1_05_02
   - class: C
-  - length_km: 0,1
+  - length_km: 0.1
   - note: мост к Югу от Ельнино
 
 - id: edge_c_e1_10
@@ -753,14 +753,14 @@
   - from: t-cross_e1_g1_02
   - to: bridge_c_e1_06_01
   - class: C
-  - length_km: 0,7
+  - length_km: 0.7
   - note: На мост
 
 - id: bridge_c_e1_06
   - from: bridge_c_e1_06_01
   - to: bridge_c_e1_06_02
   - class: C
-  - length_km: 0,7
+  - length_km: 0.7
   - note: Мост
 
 - id: edge_turquoise_e1_14
@@ -831,7 +831,7 @@
   - from: bridge_c_e2_01_01
   - to: bridge_c_e2_01_02
   - class: C
-  - length_km: 0,1
+  - length_km: 0.1
   - note: Первый мост в горах
 
 - id: edge_c_e2_04
@@ -845,7 +845,7 @@
   - from: bridge_c_e2_02_01
   - to: bridge_c_e2_02_02
   - class: C
-  - length_km: 0,1
+  - length_km: 0.1
   - note: Второй мост в горах
 
 - id: edge_c_e2_05
@@ -859,14 +859,14 @@
   - from: bridge_c_e2_03_01
   - to: bridge_c_e2_03_02
   - class: C
-  - length_km: 0,1
+  - length_km: 0.1
   - note: Третий мост в горах
 
 - id: edge_c_e2_06
   - from: bridge_c_e2_03_02
   - to: gorny_entry_nw
   - class: C
-  - length_km: 1,5
+  - length_km: 1.5
   - note: Въезд в Горный
 
 - id: edge_c_e2_07
@@ -963,7 +963,7 @@
   - from: t-cross_e1_s5
   - to: bridge_d_e3_03_01
   - class: D
-  - length_km: 0,5
+  - length_km: 0.5
   - note: к мосту 3 на трассе приозерск-ельнино
 
 - id: bridge_d_e3_03
@@ -1022,21 +1022,21 @@
   - from: t-cross_e1_g1_01
   - to: t-cross_01_white_G1_white_G1
   - class: D
-  - length_km: 0,5
+  - length_km: 0.5
   - note: Поворот на ключи
 
 - id: edge_white_g1_02
   - from: t-cross_01_white_G1_white_G1
   - to: t-cross_e1_g1_02
   - class: D
-  - length_km: 0,5
+  - length_km: 0.5
   - note: Поворот на ключи
 
 - id: edge_white_g1_03
   - from: t-cross_01_white_G1_white_G1
   - to: Kluchi_east_gate_01
   - class: D
-  - length_km: 1,5
+  - length_km: 1.5
   - note: Поворот на ключи
 
 ### G2
@@ -1044,21 +1044,21 @@
   - from: Almazniy_blockpost_01
   - to: t-cross_01_white_G2_yellow_s7
   - class: D
-  - length_km: 0,7
+  - length_km: 0.7
   - note: грунтовая дорога на алмазный
 
 - id: edge_white_g2_02
   - from: t-cross_01_white_G2_yellow_s7
   - to: t-cross_01_white_G2_white_G2
   - class: D
-  - length_km: 0,7
+  - length_km: 0.7
   - note: грунтовая дорога на алмазный (пересечение со скрытой)
 
 - id: edge_white_g2_03
   - from: t-cross_01_white_G2_white_G2
   - to: deadend_g2_01
   - class: D
-  - length_km: 0,7
+  - length_km: 0.7
   - note: грунтовая дорога на алмазный (тупик)
 
 - id: edge_white_g2_04
@@ -1107,28 +1107,28 @@
   - from: t-cross_02_white_G2_yellow_s7
   - to: t-cross_01_white_G2_yellow_s12
   - class: D
-  - length_km: 4,5
+  - length_km: 4.5
   - note: грунтовая дорога на алмазный (пересечение со скрытой)
 
 - id: edge_white_g2_11
   - from: t-cross_01_white_G2_yellow_s12
   - to: x-cross_01_white_G2_yellow_s12
   - class: D
-  - length_km: 0,4
+  - length_km: 0.4
   - note: грунтовая дорога на алмазный (пересечение со скрытой)
 
 - id: edge_white_g2_12
   - from: x-cross_01_white_G2_yellow_s12
   - to: t-cross_01_white_G2_yellow_s13_01
   - class: D
-  - length_km: 0,2
+  - length_km: 0.2
   - note: грунтовая дорога на алмазный (пересечение со скрытой)
 
 - id: edge_white_g2_13
   - from: t-cross_01_white_G2_yellow_s13_01
   - to: t-cross_01_white_G2_yellow_s13_02
   - class: D
-  - length_km: 1,5
+  - length_km: 1.5
   - note: грунтовая дорога на алмазный (пересечение со скрытой)
 
 - id: edge_white_g2_14
@@ -1145,7 +1145,7 @@
   - from: t-cross_m3_s1
   - to: t-cross_e2_s1
   - class: S
-  - length_km: 1,5
+  - length_km: 1.5
   - note: Скрытая дорога между Боровое и Горный-Нижнегорск
 
 ### S2
@@ -1216,14 +1216,14 @@
   - from: t-cross_01_white_G2_yellow_s9_01
   - to: t-cross_yellow_s9_yellow_s8
   - class: S
-  - length_km: 0,5
+  - length_km: 0.5
   - note: Секретная дорога в горах
 
 - id: edge_yellow_s9_02
   - from: t-cross_yellow_s9_yellow_s8
   - to: t-cross_01_white_G2_yellow_s9_02
   - class: S
-  - length_km: 0,5
+  - length_km: 0.5
   - note: Секретная дорога в горах
 
 ### S10
@@ -1231,7 +1231,7 @@
   - from: t-cross_01_white_G2_yellow_s10
   - to: t-cross_s2_s10
   - class: S
-  - length_km: 0,5
+  - length_km: 0.5
   - note: Секретная дорога в горах
 
 - id: edge_yellow_s10_02
@@ -1260,7 +1260,7 @@
   - from: t-cross_s10_yellow_s11_yellow
   - to: t-cross_01_white_G2_yellow_s11
   - class: S
-  - length_km: 0,5
+  - length_km: 0.5
   - note: Секретная дорога в горах
 
 ### S12
@@ -1268,14 +1268,14 @@
   - from: t-cross_s10_yellow_s12_yellow
   - to: x-cross_01_white_G2_yellow_s12
   - class: S
-  - length_km: 0,7
+  - length_km: 0.7
   - note: Секретная дорога в горах
 
 - id: edge_yellow_s12_02
   - from: x-cross_01_white_G2_yellow_s12
   - to: t-cross_01_white_G2_yellow_s12
   - class: S
-  - length_km: 0,4
+  - length_km: 0.4
   - note: Секретная дорога в горах
 
 ### S13
@@ -1283,7 +1283,7 @@
   - from: t-cross_01_white_G2_yellow_s13_01
   - to: t-cross_01_white_G2_yellow_s13_02
   - class: S
-  - length_km: 1,2
+  - length_km: 1.2
   - note: Секретная дорога в горах
 
 
@@ -1773,7 +1773,7 @@
     - gas_station_borovoe_01
       - name: gas_station_borovoe_01
       - type: gas_station
-      - location: 0,15
+      - location: 0.15
       - side: left
 
 - id: borovoe_bypass_02
@@ -1800,12 +1800,12 @@
     - warehouse_borovoe_01
       - name: warehouse_borovoe_01
       - type: warehouse
-      - location: 0,35
+      - location: 0.35
       - side: right
     - service_station_borovoe_01
       - name: service_station_borovoe_01
       - type: service_station
-      - location: 0,75
+      - location: 0.75
       - side: right
       
 - id: borovoe_bypass_05
