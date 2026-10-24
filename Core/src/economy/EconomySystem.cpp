@@ -182,6 +182,7 @@ namespace kotr::economy {
             * city.crisisFactor;
 
         // Пределы: min_price = base_price * 0.4, max_price = base_price * 4.0
+        // Лимиты применяются к финальной цене после всех множителей (event_factor, crisis_factor)
         double minPrice = static_cast<double>(good.basePricePerTon) * 0.4;
         double maxPrice = static_cast<double>(good.basePricePerTon) * 4.0;
 
